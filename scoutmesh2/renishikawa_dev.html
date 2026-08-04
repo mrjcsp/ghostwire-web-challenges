@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@renishikawa_dev / Chirp</title>
+<style>
+  :root{
+    --bg:#f0f2f5;
+    --panel:#ffffff;
+    --line:#e1e4e8;
+    --text:#0f1419;
+    --text-dim:#5b6470;
+    --brand:#3b9dd6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:0;
+    font-family:-apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  .app{max-width:600px; margin:0 auto; background:var(--panel); min-height:100vh; border-left:1px solid var(--line); border-right:1px solid var(--line);}
+
+  .top-nav{
+    padding:14px 20px; border-bottom:1px solid var(--line);
+    display:flex; align-items:center; gap:14px; position:sticky; top:0; background:rgba(255,255,255,0.95); backdrop-filter:blur(6px);
+  }
+  .brand-mark{
+    width:28px; height:28px; border-radius:8px; background:var(--brand);
+    display:flex; align-items:center; justify-content:center; color:#fff; font-weight:800; font-size:15px;
+  }
+  .top-nav .name{font-weight:700; font-size:16px;}
+
+  .cover{height:120px; background:linear-gradient(135deg, #dbe9f5, #eef4fa);}
+  .profile-head{padding:0 20px 18px; position:relative;}
+  .avatar{
+    width:76px; height:76px; border-radius:50%; background:#c7d2e0; border:4px solid var(--panel);
+    margin-top:-38px; display:flex; align-items:center; justify-content:center;
+    font-weight:800; color:#5b6470; font-size:20px;
+  }
+  .profile-head h1{font-size:19px; margin:12px 0 2px;}
+  .handle{color:var(--text-dim); font-size:14px; margin-bottom:12px;}
+  .bio{font-size:14.5px; margin-bottom:8px; max-width:480px;}
+  .meta{color:var(--text-dim); font-size:13.5px; display:flex; gap:16px; margin-bottom:4px;}
+  .stats{display:flex; gap:20px; font-size:13.5px; margin-top:10px;}
+  .stats b{color:var(--text);}
+  .stats span{color:var(--text-dim);}
+
+  .tabs{display:flex; border-bottom:1px solid var(--line); margin-top:6px;}
+  .tab{flex:1; text-align:center; padding:14px; font-size:14.5px; font-weight:600; color:var(--text-dim);}
+  .tab.active{color:var(--text); border-bottom:3px solid var(--brand);}
+
+  .post{padding:16px 20px; border-bottom:1px solid var(--line); display:flex; gap:12px;}
+  .post .avatar-sm{
+    width:42px; height:42px; border-radius:50%; background:#c7d2e0; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-weight:700; color:#5b6470; font-size:14px;
+  }
+  .post-body{flex:1;}
+  .post-head{font-size:14.5px; margin-bottom:4px;}
+  .post-head b{margin-right:6px;}
+  .post-head .u{color:var(--text-dim);}
+  .post-text{font-size:15px; line-height:1.5;}
+  .post-time{color:var(--text-dim); font-size:13px; margin-top:6px;}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <div class="top-nav">
+    <div class="brand-mark">C</div>
+    <div class="name">Chirp</div>
+  </div>
+
+  <div class="cover"></div>
+  <div class="profile-head">
+    <div class="avatar">RI</div>
+    <h1>Ren Ishikawa</h1>
+    <div class="handle">@renishikawa_dev</div>
+    <div class="bio">Platform engineer. Coffee, cameras, and whatever I'm shipping this week. Views my own, not my employer's.</div>
+    <div class="meta">
+      <span>📍 Tokyo, Japan</span>
+      <span>🔗 personal site</span>
+      <span>📅 Joined 2019</span>
+    </div>
+    <div class="stats"><b>412</b> <span>Following</span> &nbsp; <b>1,204</b> <span>Followers</span></div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active">Posts</div>
+    <div class="tab">Replies</div>
+    <div class="tab">Media</div>
+  </div>
+
+  <div class="post">
+    <div class="avatar-sm">RI</div>
+    <div class="post-body">
+      <div class="post-head"><b>Ren Ishikawa</b><span class="u">@renishikawa_dev</span></div>
+      <div class="post-text">New lens came in today. Weekend shoot incoming 📷</div>
+      <div class="post-time">2d ago</div>
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="avatar-sm">RI</div>
+    <div class="post-body">
+      <div class="post-head"><b>Ren Ishikawa</b><span class="u">@renishikawa_dev</span></div>
+      <div class="post-text">Long week. On-call rotation is brutal but at least the coffee here is good.</div>
+      <div class="post-time">5d ago</div>
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="avatar-sm">RI</div>
+    <div class="post-body">
+      <div class="post-head"><b>Ren Ishikawa</b><span class="u">@renishikawa_dev</span></div>
+      <div class="post-text">Not supposed to talk about work stuff here but I'm way too proud of this — finally got the staging build passing. Internal build tag was ghostwire{n3v3r_p0st_y0ur_w0rk} lol. Don't tell compliance 😅</div>
+      <div class="post-time">9d ago</div>
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="avatar-sm">RI</div>
+    <div class="post-body">
+      <div class="post-head"><b>Ren Ishikawa</b><span class="u">@renishikawa_dev</span></div>
+      <div class="post-text">Anyone have good ramen recommendations near Kagurazaka? New to the area.</div>
+      <div class="post-time">2w ago</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
