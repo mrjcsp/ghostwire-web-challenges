@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Halcyon Studio — Digital Products, Built Right</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand-tokens.css">
+<style>
+  :root{
+    --bg:#0b0c10;
+    --panel:#15171d;
+    --line:#24262e;
+    --text:#f2f3f5;
+    --text-dim:#9a9ea8;
+    --accent:#ffcc4d;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:0;
+    font-family:'Inter', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.5;
+  }
+  a{color:inherit;}
+
+  header{
+    border-bottom:1px solid var(--line);
+    position:sticky; top:0; background:rgba(11,12,16,0.9); backdrop-filter:blur(6px); z-index:10;
+  }
+  .nav-wrap{
+    max-width:1100px; margin:0 auto; padding:20px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{font-weight:800; font-size:19px; letter-spacing:-0.3px;}
+  nav ul{list-style:none; display:flex; gap:32px; margin:0; padding:0;}
+  nav a{text-decoration:none; color:var(--text-dim); font-size:14px; font-weight:500;}
+  nav a:hover{color:var(--text);}
+  nav a.active{color:var(--accent);}
+
+  .hero{
+    max-width:1100px; margin:0 auto; padding:110px 24px 80px;
+  }
+  .eyebrow{color:var(--accent); font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:20px;}
+  .hero h1{font-size:56px; font-weight:800; letter-spacing:-1.5px; line-height:1.05; margin:0 0 24px; max-width:680px;}
+  .hero p{color:var(--text-dim); font-size:18px; max-width:520px; margin:0 0 36px;}
+  .btn{
+    display:inline-block; background:var(--accent); color:#141414; text-decoration:none;
+    padding:13px 26px; border-radius:6px; font-weight:700; font-size:14.5px;
+  }
+
+  .stats{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    background:var(--panel);
+  }
+  .stats-grid{
+    max-width:1100px; margin:0 auto; padding:40px 24px;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:24px;
+    text-align:center;
+  }
+  .stat-num{font-size:34px; font-weight:800; color:var(--accent);}
+  .stat-lbl{color:var(--text-dim); font-size:13px; margin-top:4px;}
+
+  .work{max-width:1100px; margin:0 auto; padding:90px 24px;}
+  .section-head{margin-bottom:44px;}
+  .section-head h2{font-size:32px; font-weight:800; margin:0 0 10px; letter-spacing:-0.5px;}
+  .section-head p{color:var(--text-dim); max-width:460px; margin:0;}
+
+  .work-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px;}
+  .work-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:28px; transition:border-color .2s;
+  }
+  .work-card:hover{border-color:#3a3d47;}
+  .work-tag{color:var(--accent); font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:12px;}
+  .work-card h3{font-size:19px; margin:0 0 10px;}
+  .work-card p{color:var(--text-dim); font-size:14.5px; margin:0;}
+
+  .cta{
+    background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    text-align:center; padding:80px 24px;
+  }
+  .cta h2{font-size:30px; margin:0 0 16px;}
+  .cta p{color:var(--text-dim); margin:0 0 28px;}
+
+  footer{max-width:1100px; margin:0 auto; padding:44px 24px; color:var(--text-dim); font-size:13px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="logo">Halcyon Studio</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Digital Product Studio</div>
+  <h1>We build platforms that outlast the trend cycle.</h1>
+  <p>Halcyon partners with ambitious brands to design and engineer products people actually want to use — from first sketch to production launch.</p>
+  <a class="btn" href="team.html">Meet the team</a>
+</section>
+
+<div class="stats">
+  <div class="stats-grid">
+    <div><div class="stat-num">40+</div><div class="stat-lbl">Products shipped</div></div>
+    <div><div class="stat-num">12</div><div class="stat-lbl">Years operating</div></div>
+    <div><div class="stat-num">6</div><div class="stat-lbl">Industry awards</div></div>
+    <div><div class="stat-num">98%</div><div class="stat-lbl">Client retention</div></div>
+  </div>
+</div>
+
+<section class="work">
+  <div class="section-head">
+    <h2>Selected work</h2>
+    <p>A few of the platforms our team has designed, built, and scaled.</p>
+  </div>
+  <div class="work-grid">
+    <!--
+      Internal note (NC-4471): the description below reading "built in-house
+      by our engineering team" is not accurate. Original platform build was
+      credited to V. Marlowe, Lead Developer (2019-2024). Credit line pulled
+      from public copy after the 2024 contract renegotiation — see team page.
+      flag part 1 of 3: ghostwire{cr3d1t_
+    -->
+    <div class="work-card">
+      <div class="work-tag">E-Commerce</div>
+      <h3>NimbusCart Storefront Platform</h3>
+      <p>A full storefront and checkout experience built in-house by our engineering team, now used by thousands of independent sellers.</p>
+    </div>
+    <div class="work-card">
+      <div class="work-tag">Fintech</div>
+      <h3>Ledgerly Dashboard</h3>
+      <p>A real-time financial reporting dashboard for mid-market accounting teams, redesigned from the ground up in 2023.</p>
+    </div>
+    <div class="work-card">
+      <div class="work-tag">Healthcare</div>
+      <h3>Northwind Patient Portal</h3>
+      <p>A HIPAA-compliant scheduling and records portal serving over 40 regional clinics.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Curious who actually builds this stuff?</h2>
+  <p>Get to know the people behind the platforms.</p>
+  <a class="btn" href="team.html">Meet the team</a>
+</div>
+
+<footer>
+  <div>&copy; 2026 Halcyon Studio.</div>
+  <div>Est. 2014 &middot; Remote-first</div>
+</footer>
+
+</body>
+</html>

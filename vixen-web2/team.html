@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team — Halcyon Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand-tokens.css">
+<style>
+  :root{
+    --bg:#0b0c10;
+    --panel:#15171d;
+    --line:#24262e;
+    --text:#f2f3f5;
+    --text-dim:#9a9ea8;
+    --accent:#ffcc4d;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:0;
+    font-family:'Inter', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.5;
+  }
+  a{color:inherit;}
+
+  header{
+    border-bottom:1px solid var(--line);
+    position:sticky; top:0; background:rgba(11,12,16,0.9); backdrop-filter:blur(6px); z-index:10;
+  }
+  .nav-wrap{
+    max-width:1100px; margin:0 auto; padding:20px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{font-weight:800; font-size:19px; letter-spacing:-0.3px;}
+  nav ul{list-style:none; display:flex; gap:32px; margin:0; padding:0;}
+  nav a{text-decoration:none; color:var(--text-dim); font-size:14px; font-weight:500;}
+  nav a:hover{color:var(--text);}
+  nav a.active{color:var(--accent);}
+
+  .page-head{max-width:1100px; margin:0 auto; padding:80px 24px 50px;}
+  .eyebrow{color:var(--accent); font-size:13px; font-weight:600; letter-spacing:2px; text-transform:uppercase; margin-bottom:18px;}
+  .page-head h1{font-size:42px; font-weight:800; letter-spacing:-1px; margin:0 0 16px;}
+  .page-head p{color:var(--text-dim); font-size:16px; max-width:520px; margin:0;}
+
+  .team-grid{
+    max-width:1100px; margin:0 auto; padding:0 24px 100px;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px;
+  }
+  .member{
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:24px; text-align:left;
+  }
+  .avatar{
+    width:56px; height:56px; border-radius:10px; margin-bottom:16px;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-size:18px; color:#141414;
+  }
+  .member h3{font-size:16px; margin:0 0 3px;}
+  .member .role{color:var(--accent); font-size:12.5px; font-weight:600; margin-bottom:10px;}
+  .member p{color:var(--text-dim); font-size:13.5px; margin:0;}
+
+  .member.ghost{
+    border-style:dashed; border-color:#33363f; opacity:0.55;
+  }
+  .member.ghost .avatar{background:#24262e; color:#5a5e6a;}
+  .member.ghost h3{color:var(--text-dim);}
+
+  footer{max-width:1100px; margin:0 auto; padding:44px 24px; color:var(--text-dim); font-size:13px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="logo">Halcyon Studio</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="team.html" class="active">Team</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="eyebrow">The People</div>
+  <h1>Meet the studio</h1>
+  <p>Halcyon is small on purpose. Every product we ship has a name behind it.</p>
+</div>
+
+<div class="team-grid">
+
+  <div class="member">
+    <div class="avatar" style="background:#7c9eff;">RD</div>
+    <h3>Renata Diaz</h3>
+    <div class="role">Founder &amp; Creative Director</div>
+    <p>Started Halcyon in 2014 after a decade in agency design. Leads brand and product strategy for every client.</p>
+  </div>
+
+  <div class="member">
+    <div class="avatar" style="background:#7fe0b0;">MK</div>
+    <h3>Marcus Kwan</h3>
+    <div class="role">Engineering Lead</div>
+    <p>Oversees the current platform team and infrastructure. Joined Halcyon in 2024.</p>
+  </div>
+
+  <div class="member">
+    <div class="avatar" style="background:#ffb3c6;">SO</div>
+    <h3>Sana Okafor</h3>
+    <div class="role">Product Designer</div>
+    <p>Focuses on UX research and interface design across Halcyon's healthcare and fintech clients.</p>
+  </div>
+
+  <div class="member">
+    <div class="avatar" style="background:#c9a8ff;">TB</div>
+    <h3>Theo Brandt</h3>
+    <div class="role">Account Director</div>
+    <p>Manages client relationships and delivery timelines from kickoff to launch.</p>
+  </div>
+
+  <!--
+    Former team member removed from public site — 2024-11-03, per client request (NC-4471).
+    V. Marlowe — Lead Developer, 2019-2024. Designed and built the entire NimbusCart
+    storefront platform solo, credited in every internal doc through the 2024 contract
+    renegotiation. Credit line pulled from this page the same week the client rebranded
+    the platform as an in-house build. No forwarding contact on file since.
+    flag part 2 of 3: wh3r3_1ts_
+  -->
+  <div class="member ghost">
+    <div class="avatar">—</div>
+    <h3>Former Team Member</h3>
+    <div class="role">Position Archived</div>
+    <p>Profile no longer available.</p>
+  </div>
+
+</div>
+
+<footer>&copy; 2026 Halcyon Studio.</footer>
+
+</body>
+</html>
