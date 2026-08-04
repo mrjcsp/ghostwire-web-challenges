@@ -1,0 +1,23 @@
+/*
+  brand-tokens.css
+  legacy design token file — superseded by the inline theme, scheduled
+  for removal. Left in place for now since a couple of older client
+  proposal decks still reference these variable names directly.
+  See ticket NC-4471 for cleanup status.
+
+  flag part 3 of 3: du3}
+*/
+
+:root {
+  --halcyon-legacy-accent: #e0a92f;
+  --halcyon-legacy-bg: #10111a;
+}
+
+/* unused since the 2025 rebrand, kept for reference only */
+.legacy-badge {
+  background: var(--halcyon-legacy-accent);
+  color: #14141a;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+}
