@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>why "just read the disassembly" is a scam &mdash; fox.exe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d0e12; --panel:#15171d; --line:#262931;
+    --text:#e4e6eb; --text-dim:#8b8f9a; --accent:#7ee787;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; padding:0; font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); line-height:1.7;}
+  header{border-bottom:1px solid var(--line); padding:28px 0;}
+  .wrap{max-width:700px; margin:0 auto; padding:0 24px;}
+  .brand{font-family:'JetBrains Mono', monospace; font-weight:800; font-size:19px;}
+  .brand .prompt{color:var(--accent);}
+  .brand a{color:var(--text); text-decoration:none;}
+  main{max-width:700px; margin:0 auto; padding:50px 24px 80px;}
+  .post-date{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--accent); margin-bottom:10px;}
+  h1{font-size:26px; margin:0 0 24px;}
+  p{color:var(--text-dim); font-size:15px; margin:0 0 18px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><span class="prompt">&gt;</span> <a href="../index.html">fox.exe</a></div>
+  </div>
+</header>
+
+<main>
+  <div class="post-date">2026.01.03</div>
+  <h1>why "just read the disassembly" is a scam</h1>
+  <p>for a while i refused to actually run anything in a debugger. felt like cheating. real reverse engineers just read the disassembly and figure it out in their head right? that's what everyone online acts like anyway.</p>
+  <p>wrong obviously. some behavior only shows up at runtime and no amount of staring at static output is gonna reconstruct what a program does when a value changes based on something external. timing, environment, whatever it's checking. you can't out-think that from a wall of text.</p>
+  <p>these days i open a debugger almost immediately. saves hours. anyone still doing pure static analysis for everything is kind of coping ngl</p>
+</main>
+
+</body>
+</html>
