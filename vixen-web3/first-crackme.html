@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>i cracked my first binary and NOBODY believed me &mdash; fox.exe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d0e12; --panel:#15171d; --line:#262931;
+    --text:#e4e6eb; --text-dim:#8b8f9a; --accent:#7ee787;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; padding:0; font-family:'Inter', sans-serif; background:var(--bg); color:var(--text); line-height:1.7;}
+  header{border-bottom:1px solid var(--line); padding:28px 0;}
+  .wrap{max-width:700px; margin:0 auto; padding:0 24px;}
+  .brand{font-family:'JetBrains Mono', monospace; font-weight:800; font-size:19px;}
+  .brand .prompt{color:var(--accent);}
+  .brand a{color:var(--text); text-decoration:none;}
+  main{max-width:700px; margin:0 auto; padding:50px 24px 80px;}
+  .post-date{font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--accent); margin-bottom:10px;}
+  h1{font-size:26px; margin:0 0 24px;}
+  p{color:var(--text-dim); font-size:15px; margin:0 0 18px;}
+  code{background:var(--panel); padding:2px 6px; border-radius:4px; font-family:'JetBrains Mono', monospace; font-size:13.5px; color:var(--accent);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><span class="prompt">&gt;</span> <a href="../index.html">fox.exe</a></div>
+  </div>
+</header>
+
+<main>
+  <div class="post-date">2026.02.11</div>
+  <h1>i cracked my first binary and NOBODY believed me</h1>
+  <p>ok so i stared at this thing for FOUR HOURS before realizing the check i was looking at wasn't even the real one. embarrassing. but also kind of a flex once you actually get it, ngl.</p>
+  <p>the binary compared my input against what looked like a hardcoded string, right there in the disassembly, easy to find, too easy honestly. that should've been my first clue. the ACTUAL check was buried in a completely different function, called through a pointer i didn't even bother tracing at first because i thought i already won.</p>
+  <p>moral of the story: if a check looks that easy to find, it's not the real one. the real one is hiding somewhere you haven't checked yet. learned that the hard way so you don't have to. you're welcome.</p>
+</main>
+
+</body>
+</html>

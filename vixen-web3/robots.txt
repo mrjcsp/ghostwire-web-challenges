@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /drafts/
+Disallow: /drafts/unpublished-2019.html
+Disallow: /admin/
+Sitemap: https://fox.exe.example/sitemap.xml
