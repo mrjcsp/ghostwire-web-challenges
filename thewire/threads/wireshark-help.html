@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ok how does wireshark even work &mdash; THE WIRE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a class="brand" href="../index.html">THE<span>&nbsp;</span>WIRE</a>
+    <div class="status"><span class="dot"></span> channel secure</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <a class="back-link" href="../index.html">&larr; all topics</a>
+
+  <div class="thread-head">
+    <div class="thread-tag">thread &middot; general &middot; help</div>
+    <h1 class="thread-title">ok how does wireshark even work</h1>
+    <div class="thread-meta">6 replies &middot; last reply 14:23</div>
+  </div>
+
+  <!-- SNAKEBYTE -->
+  <div class="post green">
+    <div class="avatar">
+      <img src="../avatars/snakebyte.jpg" alt="Snakebyte">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">SNAKEBYTE</span>
+        <span class="timestamp">14:02</span>
+      </div>
+      <div class="msg">ok i will say something embarrassing. i have a capture file open in wireshark and it is just. a wall of packets. thousands of lines. i write code all day, i do not do this. someone explain how anyone reads this without losing their mind</div>
+    </div>
+  </div>
+
+  <!-- PACKETWOLF -->
+  <div class="post blue">
+    <div class="avatar">
+      <img src="../avatars/packetwolf.jpg" alt="Packetwolf">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">PACKETWOLF</span>
+        <span class="timestamp">14:05</span>
+      </div>
+      <div class="msg">nobody reads all of it. that's the mistake everyone makes the first time. you don't scroll, you filter.
+
+there's a bar at the top of the window, right under the toolbar. that's the display filter. type a protocol name in there and hit enter and it hides everything that isn't that protocol. the wall of packets you're looking at is probably TCP handshakes, ARP noise, DNS lookups, background traffic that has nothing to do with what you actually care about.</div>
+    </div>
+  </div>
+
+  <!-- SNAKEBYTE -->
+  <div class="post green">
+    <div class="avatar">
+      <img src="../avatars/snakebyte.jpg" alt="Snakebyte">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">SNAKEBYTE</span>
+        <span class="timestamp">14:07</span>
+      </div>
+      <div class="msg">ok so what do i actually type. give me the exact thing</div>
+    </div>
+  </div>
+
+  <!-- PACKETWOLF -->
+  <div class="post blue">
+    <div class="avatar">
+      <img src="../avatars/packetwolf.jpg" alt="Packetwolf">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">PACKETWOLF</span>
+        <span class="timestamp">14:09</span>
+      </div>
+      <div class="msg">type http, lowercase, nothing else, into the filter bar and hit enter. that shows you only HTTP traffic. if the capture has any plaintext web requests in it at all, that's where they'll show up.
+
+worth knowing why this even works: HTTP is unencrypted. every request, every response, every header, sitting right there in the packet in plain text. no decryption, no key, nothing. that's the whole point of a challenge that hands you a pcap and says "find the flag." if it were HTTPS you'd be stuck. it isn't, so you're not.</div>
+    </div>
+  </div>
+
+  <!-- SNAKEBYTE -->
+  <div class="post green">
+    <div class="avatar">
+      <img src="../avatars/snakebyte.jpg" alt="Snakebyte">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">SNAKEBYTE</span>
+        <span class="timestamp">14:14</span>
+      </div>
+      <div class="msg">ok that actually cut it down to almost nothing, way better. now i have like 7 requests. i clicked one and it's showing me hex garbage on one side and something that looks like actual text on the other, is that the part i want</div>
+    </div>
+  </div>
+
+  <!-- PACKETWOLF -->
+  <div class="post blue">
+    <div class="avatar">
+      <img src="../avatars/packetwolf.jpg" alt="Packetwolf">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">PACKETWOLF</span>
+        <span class="timestamp">14:19</span>
+      </div>
+      <div class="msg">yeah, that's the packet bytes pane, you can read it there but it's annoying. faster way: right click the packet, Follow, then HTTP Stream. that reconstructs the whole request and response as actual readable text in one window instead of you piecing it together packet by packet.
+
+once you're looking at the request, check the URL itself first. the request line at the top, right after GET or POST. people put things in query parameters they really shouldn't. that's usually the fastest place to look before you even bother with headers or the response body.</div>
+    </div>
+  </div>
+
+  <!-- SNAKEBYTE -->
+  <div class="post green">
+    <div class="avatar">
+      <img src="../avatars/snakebyte.jpg" alt="Snakebyte">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">SNAKEBYTE</span>
+        <span class="timestamp">14:23</span>
+      </div>
+      <div class="msg">found it. i'm not gonna say where, figure it out yourselves, but yeah. it was just sitting in a URL like nobody thought about it for one second. incredible honestly. thanks wolf, i owe you one</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>THE WIRE // internal comms &middot; do not share outside the channel</footer>
+
+</body>
+</html>
