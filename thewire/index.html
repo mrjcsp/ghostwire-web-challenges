@@ -39,7 +39,7 @@
         <div class="topic-cat">general</div>
       </div>
       <div class="topic-count">8</div>
-      <div class="topic-views">8</div>
+      <div class="topic-views" data-counter="check-in">&mdash;</div>
       <div class="topic-activity">04:02</div>
     </a>
 
@@ -49,7 +49,7 @@
         <div class="topic-cat">help</div>
       </div>
       <div class="topic-count">6</div>
-      <div class="topic-views">14</div>
+      <div class="topic-views" data-counter="wireshark-help">&mdash;</div>
       <div class="topic-activity">14:23</div>
     </a>
   </div>
@@ -57,6 +57,16 @@
 </div>
 
 <footer>THE WIRE // internal comms &middot; do not share outside the channel</footer>
+
+<script>
+  document.querySelectorAll('[data-counter]').forEach(function (el) {
+    var name = el.getAttribute('data-counter');
+    fetch('https://api.counterapi.dev/v1/ghostwire-jcp-board/' + name)
+      .then(function (res) { return res.json(); })
+      .then(function (data) { el.textContent = data.count; })
+      .catch(function () { el.textContent = '?'; });
+  });
+</script>
 
 </body>
 </html>
