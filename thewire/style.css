@@ -121,6 +121,17 @@ header{
   border:1px solid var(--gold); color:var(--gold);
   box-shadow:0 0 8px rgba(255,215,106,0.35);
 }
+.superuser-badge{
+  font-family:'Share Tech Mono', monospace; font-size:10px; text-transform:uppercase;
+  letter-spacing:1.5px; padding:2px 8px; border-radius:3px;
+  border:1px solid #cfd8e3; color:#cfd8e3;
+  box-shadow:0 0 8px rgba(207,216,227,0.25);
+}
+.member-badge{
+  font-family:'Share Tech Mono', monospace; font-size:10px; text-transform:uppercase;
+  letter-spacing:1.5px; padding:2px 8px; border-radius:3px;
+  border:1px solid var(--text-dim); color:var(--text-dim);
+}
 .timestamp{color:var(--text-dim); font-size:12px; font-family:'Share Tech Mono', monospace; margin-left:auto;}
 .msg{font-size:15.5px; color:var(--text); white-space:pre-wrap;}
 
