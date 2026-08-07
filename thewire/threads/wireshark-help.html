@@ -36,6 +36,7 @@
     <div class="post-body">
       <div class="post-headline">
         <span class="handle">SNAKEBYTE</span>
+        <span class="member-badge">member</span>
         <span class="timestamp">14:02</span>
       </div>
       <div class="msg">ok i will say something embarrassing. i have a capture file open in wireshark and it is just. a wall of packets. thousands of lines. i write code all day, i do not do this. someone explain how anyone reads this without losing their mind</div>
@@ -50,9 +51,10 @@
     <div class="post-body">
       <div class="post-headline">
         <span class="handle">PACKETWOLF</span>
+        <span class="member-badge">member</span>
         <span class="timestamp">14:05</span>
       </div>
-      <div class="msg">nobody reads all of it. that's the mistake everyone makes the first time. you don't scroll, you filter.
+      <div class="msg">nobody reads all of it. that's mistake everyone makes the first time. you don't scroll, you filter.
 
 there's a bar at the top of the window, right under the toolbar. that's the display filter. type a protocol name in there and hit enter and it hides everything that isn't that protocol. the wall of packets you're looking at is probably TCP handshakes, ARP noise, DNS lookups, background traffic that has nothing to do with what you actually care about.</div>
     </div>
@@ -66,6 +68,7 @@ there's a bar at the top of the window, right under the toolbar. that's the disp
     <div class="post-body">
       <div class="post-headline">
         <span class="handle">SNAKEBYTE</span>
+        <span class="member-badge">member</span>
         <span class="timestamp">14:07</span>
       </div>
       <div class="msg">ok so what do i actually type. give me the exact thing</div>
@@ -80,11 +83,12 @@ there's a bar at the top of the window, right under the toolbar. that's the disp
     <div class="post-body">
       <div class="post-headline">
         <span class="handle">PACKETWOLF</span>
+        <span class="member-badge">member</span>
         <span class="timestamp">14:09</span>
       </div>
-      <div class="msg">type http, lowercase, nothing else, into the filter bar and hit enter. that shows you only HTTP traffic. if the capture has any plaintext web requests in it at all, that's where they'll show up.
+      <div class="msg">type http, lowercase, nothing else, into the filter bar and hit enter. that shows you only HTTP traffic. if the capture has any plaintext web request in it at all, is where they show up.
 
-worth knowing why this even works: HTTP is unencrypted. every request, every response, every header, sitting right there in the packet in plain text. no decryption, no key, nothing. that's the whole point of a challenge that hands you a pcap and says "find the flag." if it were HTTPS you'd be stuck. it isn't, so you're not.</div>
+worth knowing why this even works: HTTP is unencrypted. every request, every response, every header, sitting right there in the packet in plain text. no decryption, no key, nothing. that's why people leave things in a capture without realizing it, they assume nobody's actually going to sit down and read through it. most people don't. we do.</div>
     </div>
   </div>
 
@@ -96,6 +100,7 @@ worth knowing why this even works: HTTP is unencrypted. every request, every res
     <div class="post-body">
       <div class="post-headline">
         <span class="handle">SNAKEBYTE</span>
+        <span class="member-badge">member</span>
         <span class="timestamp">14:14</span>
       </div>
       <div class="msg">ok that actually cut it down to almost nothing, way better. now i have like 7 requests. i clicked one and it's showing me hex garbage on one side and something that looks like actual text on the other, is that the part i want</div>
@@ -110,11 +115,12 @@ worth knowing why this even works: HTTP is unencrypted. every request, every res
     <div class="post-body">
       <div class="post-headline">
         <span class="handle">PACKETWOLF</span>
+        <span class="member-badge">member</span>
         <span class="timestamp">14:19</span>
       </div>
-      <div class="msg">yeah, that's the packet bytes pane, you can read it there but it's annoying. faster way: right click the packet, Follow, then HTTP Stream. that reconstructs the whole request and response as actual readable text in one window instead of you piecing it together packet by packet.
+      <div class="msg">yeah, that's the packet bytes pane, you can read it there but is annoying. faster way: right click the packet, Follow, then HTTP Stream. that reconstructs the whole request and response as actual readable text in one window instead of you piecing it together packet by packet.
 
-once you're looking at the request, check the URL itself first. the request line at the top, right after GET or POST. people put things in query parameters they really shouldn't. that's usually the fastest place to look before you even bother with headers or the response body.</div>
+once you're looking at the request, check the URL first, in first place. the request line at the top, right after GET or POST. people put things in query parameters they really shouldn't. that's usually the fastest place to look before you even bother with the headers or the response body.</div>
     </div>
   </div>
 
@@ -126,6 +132,7 @@ once you're looking at the request, check the URL itself first. the request line
     <div class="post-body">
       <div class="post-headline">
         <span class="handle">SNAKEBYTE</span>
+        <span class="member-badge">member</span>
         <span class="timestamp">14:23</span>
       </div>
       <div class="msg">found it. i'm not gonna say where, figure it out yourselves, but yeah. it was just sitting in a URL like nobody thought about it for one second. incredible honestly. thanks wolf, i owe you one</div>
