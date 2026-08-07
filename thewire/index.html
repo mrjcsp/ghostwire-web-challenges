@@ -61,9 +61,9 @@
 <script>
   document.querySelectorAll('[data-counter]').forEach(function (el) {
     var name = el.getAttribute('data-counter');
-    fetch('https://api.counterapi.dev/v1/ghostwire-jcp-board/' + name)
+    fetch('https://countapi.mileshilliard.com/api/v1/get/ghostwire-jcp-board-' + name)
       .then(function (res) { return res.json(); })
-      .then(function (data) { el.textContent = data.count; })
+      .then(function (data) { el.textContent = data.value; })
       .catch(function () { el.textContent = '?'; });
   });
 </script>
