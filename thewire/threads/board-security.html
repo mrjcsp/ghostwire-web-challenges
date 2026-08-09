@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>is this board actually secure &mdash; THE WIRE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a class="brand" href="../index.html">THE<span>&nbsp;</span>WIRE</a>
+    <div class="status"><span class="dot"></span> channel secure</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <a class="back-link" href="../index.html">&larr; all topics</a>
+
+  <div class="thread-head">
+    <div class="thread-tag">thread &middot; general &middot; internal</div>
+    <h1 class="thread-title">is this board actually secure</h1>
+    <div class="thread-meta">4 replies &middot; last reply 21:18</div>
+  </div>
+
+  <!-- VIXEN.EXE -->
+  <div class="post magenta">
+    <div class="avatar">
+      <img src="../avatars/vixen-exe.png" alt="Vixen.exe">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">VIXEN.EXE</span>
+        <span class="member-badge">member</span>
+        <span class="timestamp">20:47</span>
+      </div>
+      <div class="msg">ok not to be that person but has anyone actually looked at what this board is running on. plain everything, sessions that never expire, nothing encrypted at rest as far as i can tell. i ran a quick pass on it out of habit and i'm not thrilled. we use this to plan actual operations and it's held together with tape</div>
+    </div>
+  </div>
+
+  <!-- CIPHER -->
+  <div class="post cyan">
+    <div class="avatar">
+      <img src="../avatars/cipher.png" alt="Cipher">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">CIPHER</span>
+        <span class="admin-badge">admin</span>
+        <span class="timestamp">20:52</span>
+      </div>
+      <div class="msg">Then fix it. Complaints without a plan don't help anyone. If you or anyone else has specific changes, list them. I'll make time to review.</div>
+    </div>
+  </div>
+
+  <!-- STATICVEIL -->
+  <div class="post amber">
+    <div class="avatar">
+      <img src="../avatars/staticveil.png" alt="Staticveil">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">STATICVEIL</span>
+        <span class="superuser-badge">superuser</span>
+        <span class="timestamp">21:03</span>
+      </div>
+      <div class="msg">Since you asked. In order of how much I'd actually worry about them:
+
+1. sessions need to expire. nothing should stay logged in indefinitely.
+2. anything sensitive gets discussed here in plain text. that's a liability regardless of who's reading it.
+3. access should be reviewed on a schedule, not assumed permanent just because someone was added once and never removed.
+
+None of this is complicated. It's just been ignored.</div>
+    </div>
+  </div>
+
+  <!-- BINARYFOX -->
+  <div class="post violet">
+    <div class="avatar">
+      <img src="../avatars/binaryfox.png" alt="Binaryfox">
+    </div>
+    <div class="post-body">
+      <div class="post-headline">
+        <span class="handle">BINARYFOX</span>
+        <span class="member-badge">member</span>
+        <span class="timestamp">21:18</span>
+      </div>
+      <div class="msg">lmaooo static really said "in order of how much i'd worry about them" like she's briefing a room 😭 not to make this worse but i could probably get into half of what we're talking about right now in like 10 min so idk if the problem is really the protocols</div>
+    </div>
+  </div>
+
+</div>
+
+<!--
+  mod note: forgot to strip this before pushing live again.
+  test token still active, meant to rotate it last week: ghostwire{th3y_n3v3r_ch3ck_s0urc3}
+  - V
+-->
+
+<footer>THE WIRE // internal comms &middot; do not share outside the channel</footer>
+
+<script>
+  fetch('https://countapi.mileshilliard.com/api/v1/hit/ghostwire-jcp-board-board-security').catch(() => {});
+</script>
+
+</body>
+</html>
