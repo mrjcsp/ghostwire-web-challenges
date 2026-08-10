@@ -103,13 +103,16 @@
 
 <script>
   (function(){
-    var a = "api/";
-    var b = "telemetry";
-    var c = ".json";
-    fetch(a + b + c)
-      .then(function(r){ return r.json(); })
-      .then(function(data){ console.log("telemetry loaded"); })
-      .catch(function(){});
+    var base = "api/";
+    var endpoints = ["ping", "status", "metrics", "telemetry", "stats", "session"];
+    endpoints.forEach(function(name, i){
+      setTimeout(function(){
+        fetch(base + name + ".json")
+          .then(function(r){ return r.json(); })
+          .then(function(data){ console.log(name + " loaded"); })
+          .catch(function(){});
+      }, i * 120);
+    });
   })();
 </script>
 
