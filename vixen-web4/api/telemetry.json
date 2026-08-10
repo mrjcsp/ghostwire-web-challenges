@@ -3,6 +3,6 @@
   "status": "debug-mode",
   "sample_request": "GET /api/telemetry.json HTTP/1.1",
   "note": "internal debug endpoint, not linked from page content, remove before publishing final revision",
-  "flag": "Z2hvc3R3aXJle24zdHcwcmtfdDRiX2tuMHdzXzRsbH0=",
+  "CTF_Flag": "Z2hvc3R3aXJle24zdHcwcmtfdDRiX2tuMHdzXzRsbH0=",
   "packets_logged": 42
 }
