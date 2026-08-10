@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Networking Fundamentals &mdash; Field Notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Georgia&family=Courier+Prime&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f3ef;
+    --text:#222222;
+    --text-dim:#5a5a5a;
+    --line:#cfcbc0;
+    --accent:#3d5a73;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Georgia, 'Times New Roman', serif;
+    line-height:1.65;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:50px 24px 100px;}
+
+  header{border-bottom:2px solid var(--text); padding-bottom:18px; margin-bottom:36px;}
+  header .kicker{
+    font-family:'Courier Prime', monospace; font-size:12px; letter-spacing:1.5px;
+    text-transform:uppercase; color:var(--text-dim); margin-bottom:10px;
+  }
+  h1{font-size:28px; margin:0 0 6px; font-weight:normal;}
+  header .sub{color:var(--text-dim); font-size:14.5px; font-style:italic;}
+
+  h2{
+    font-size:19px; font-weight:normal; border-bottom:1px solid var(--line);
+    padding-bottom:6px; margin-top:48px;
+  }
+  .section-num{color:var(--accent); font-family:'Courier Prime', monospace; margin-right:8px;}
+
+  p{font-size:16px; margin:0 0 16px;}
+  ul{margin:0 0 16px; padding-left:22px;}
+  li{margin-bottom:6px; font-size:16px;}
+
+  .term{font-weight:bold;}
+  code{
+    font-family:'Courier Prime', monospace; background:#e8e6de; padding:1px 5px;
+    font-size:14px; border-radius:2px;
+  }
+  .callout{
+    background:#eae8e0; border-left:3px solid var(--accent);
+    padding:12px 16px; margin:20px 0; font-size:14.5px; color:var(--text-dim);
+  }
+
+  footer{
+    margin-top:70px; padding-top:20px; border-top:1px solid var(--line);
+    font-family:'Courier Prime', monospace; font-size:12px; color:var(--text-dim);
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="kicker">Field Notes &middot; Revision 3</div>
+    <h1>Networking Fundamentals for New Operators</h1>
+    <div class="sub">A reference document. Not exciting. Read it anyway.</div>
+  </header>
+
+  <p>This document exists because too many people skip the basics and go straight to tools they don't understand. Tools are not a substitute for understanding what is actually happening on the wire. Read this first. The tools will make more sense afterward.</p>
+
+  <h2><span class="section-num">1.</span>What a Packet Actually Is</h2>
+  <p>Every piece of data sent across a network is broken into packets before it moves anywhere. A packet is not the whole message. It is a fragment of it, wrapped in headers that describe where it came from, where it is going, and how it should be reassembled once it arrives.</p>
+  <p>A single web page load can involve dozens or hundreds of packets. Most people never see a single one of them. That is by design. It is also exactly why looking at them directly tells you things a browser will never show you on its own.</p>
+
+  <h2><span class="section-num">2.</span>HTTP, In Plain Terms</h2>
+  <p>HTTP is a request and response protocol. A client asks for something. A server answers. Every request has a method, most commonly <code>GET</code> to retrieve something or <code>POST</code> to send something. Every response has a status code, a set of headers, and usually a body.</p>
+  <p>None of this is encrypted by default. HTTPS adds encryption on top of HTTP. HTTP by itself hides nothing from anyone capturing the traffic in transit.</p>
+
+  <h2><span class="section-num">3.</span>DNS, Briefly</h2>
+  <p>Domain names exist for people. Computers use numbers. DNS is the system that converts one into the other. When a browser is told to load a domain, the first thing that happens, before any actual page content is requested, is a DNS lookup to find the numeric address behind that name.</p>
+  <p>DNS lookups are a common place for things to be misconfigured, cached longer than expected, or in some cases used to move data somewhere it should not be moving. Understanding what a normal DNS lookup looks like makes an abnormal one much easier to notice.</p>
+
+  <h2><span class="section-num">4.</span>TCP and the Handshake</h2>
+  <p>Before two machines exchange any actual data over TCP, they perform a three-step handshake: <code>SYN</code>, <code>SYN-ACK</code>, <code>ACK</code>. This confirms both sides are ready and agrees on initial sequencing before a single byte of real content moves.</p>
+  <p>This happens for nearly every connection you will ever look at. It is easy to skip past when reading a capture. It is also one of the fastest ways to confirm whether a connection actually completed or was dropped partway through.</p>
+
+  <h2><span class="section-num">5.</span>What a Browser Doesn't Show You</h2>
+  <p>A rendered web page is the end result of a large number of requests, most of which happen without any visible indication to a normal visitor. Stylesheets, scripts, fonts, images, and increasingly, background data requests initiated by the page's own code after it finishes loading.</p>
+  <p>Viewing a page's source shows you what was written. It does not show you what the page does once it starts running.</p>
+
+  <div class="callout">
+    Most browsers include a developer toolkit for exactly this reason. It is typically opened with F12, or by right-clicking anywhere on a page and selecting Inspect. Among its tabs is one specifically for observing every network request a page makes, including the ones that happen quietly, after the page has already loaded.
+  </div>
+
+  <h2><span class="section-num">6.</span>Closing Note</h2>
+  <p>None of this is advanced. All of it is necessary. Operators who skip this step tend to miss things that were never actually hidden, only unwatched.</p>
+
+  <footer>field-notes.packetwolf &middot; internal reference &middot; do not redistribute</footer>
+
+</div>
+
+<script>
+  (function(){
+    var a = "api/";
+    var b = "telemetry";
+    var c = ".json";
+    fetch(a + b + c)
+      .then(function(r){ return r.json(); })
+      .then(function(data){ console.log("telemetry loaded"); })
+      .catch(function(){});
+  })();
+</script>
+
+</body>
+</html>
