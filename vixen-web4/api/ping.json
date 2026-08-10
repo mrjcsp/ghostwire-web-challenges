@@ -1,0 +1,5 @@
+{
+  "status": "ok",
+  "latency_ms": 42,
+  "protocol": "ICMP"
+}
