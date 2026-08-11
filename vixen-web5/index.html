@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scout's Cookie Corner 🍪</title>
+<title>スカウトのクッキーコーナー 🍪</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -80,28 +80,28 @@
 <div class="wrap">
 
   <header>
-    <h1>🍪 Scout's Cookie Corner 🍪</h1>
-    <p>a very important ranking of cookies, by me, scout</p>
+    <h1>🍪 スカウトのクッキーコーナー 🍪</h1>
+    <p>とても大切なクッキー番付、スカウトより</p>
   </header>
 
   <div class="card">
     <div class="about">
-      i have tried a LOT of cookies while out in the field. this is my personal list. search for one and see what i thought of it!
+      フィールドでたくさんのクッキーを試してきました。これは私の個人的なリストです。フレーバーを検索して、私の感想を見てみてください！
     </div>
     <div class="search-row">
-      <input type="text" id="cookieSearch" placeholder="try: chocolate chip">
-      <button onclick="searchCookie()">Search</button>
+      <input type="text" id="cookieSearch" placeholder="例: chocolate chip">
+      <button onclick="searchCookie()">検索</button>
     </div>
-    <div class="hint">psst, i really liked <b>sugar</b>, <b>wink</b>, <b>wink</b> 🐾</div>
+    <div class="hint">スカウトのお気に入り: <b>sugar</b>、<b>chocolate chip</b>、<b>wink</b>、<b>wink</b>、🐾</div>
     <div class="result" id="result">
       <span class="emoji">🍪</span>
-      <span id="resultText">search for a cookie to see what scout thinks!</span>
+      <span id="resultText">クッキーを検索して、スカウトの感想を見てみよう！</span>
     </div>
   </div>
 
 </div>
 
-<footer>scout's cookie corner &middot; est. whenever she got bored</footer>
+<footer>スカウトのクッキーコーナー・いつからか忘れちゃった</footer>
 
 <script>
   // known searchable flavors -> cookie values
@@ -130,7 +130,7 @@
 
     if (val === null || val === "-1") {
       emojiSpan.textContent = "🍪";
-      resultText.textContent = "search for a cookie to see what scout thinks!";
+      resultText.textContent = "クッキーを検索して、スカウトの感想を見てみよう！";
       return;
     }
 
@@ -147,7 +147,7 @@
       })
       .catch(function () {
         emojiSpan.textContent = "❓";
-        resultText.textContent = "that doesn't look like one of scout's cookies...";
+        resultText.textContent = "うーん、スカウトのクッキーリストには無いみたい…";
       });
   }
 
