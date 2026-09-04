@@ -10,21 +10,17 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <div class="nav-wrap">
     <div class="brand">THE<span>&nbsp;</span>WIRE</div>
     <div class="status"><span class="dot"></span> channel secure</div>
   </div>
 </header>
-
 <div class="wrap">
-
   <div class="board-head">
     <div class="board-tag">internal &middot; members only &middot; 8 active</div>
     <h1 class="board-title">All Topics</h1>
   </div>
-
   <div class="topic-list">
     <div class="topic-list-head">
       <div>Topic</div>
@@ -32,7 +28,15 @@
       <div style="text-align:center;">Views</div>
       <div style="text-align:right;">Activity</div>
     </div>
-
+    <a class="topic-row" href="threads/telemetry-egg.html">
+      <div class="topic-main">
+        <div class="topic-title">found something in your telemetry.json</div>
+        <div class="topic-cat">general</div>
+      </div>
+      <div class="topic-count">4</div>
+      <div class="topic-views" data-counter="telemetry-egg">&mdash;</div>
+      <div class="topic-activity">11:12</div>
+    </a>
     <a class="topic-row" href="threads/check-in.html">
       <div class="topic-main">
         <div class="topic-title">check-in // first contact</div>
@@ -42,7 +46,6 @@
       <div class="topic-views" data-counter="check-in">&mdash;</div>
       <div class="topic-activity">04:02</div>
     </a>
-
     <a class="topic-row" href="threads/wireshark-help.html">
       <div class="topic-main">
         <div class="topic-title">ok how does wireshark even work</div>
@@ -52,7 +55,6 @@
       <div class="topic-views" data-counter="wireshark-help">&mdash;</div>
       <div class="topic-activity">14:23</div>
     </a>
-
     <a class="topic-row" href="threads/board-security.html">
       <div class="topic-main">
         <div class="topic-title">is this board actually secure</div>
@@ -62,7 +64,6 @@
       <div class="topic-views" data-counter="board-security">&mdash;</div>
       <div class="topic-activity">21:18</div>
     </a>
-
     <a class="topic-row" href="threads/ssh-basics.html">
       <div class="topic-main">
         <div class="topic-title">ssh just doesn't work half the time</div>
@@ -72,7 +73,6 @@
       <div class="topic-views" data-counter="ssh-basics">&mdash;</div>
       <div class="topic-activity">16:42</div>
     </a>
-
     <a class="topic-row" href="threads/new-cipher.html">
       <div class="topic-main">
         <div class="topic-title">new way of doing this</div>
@@ -82,7 +82,6 @@
       <div class="topic-views" data-counter="new-cipher">&mdash;</div>
       <div class="topic-activity">09:52</div>
     </a>
-
     <a class="topic-row" href="threads/lockpicking-help.html">
       <div class="topic-main">
         <div class="topic-title">ok how do you even pick a lock</div>
@@ -93,11 +92,8 @@
       <div class="topic-activity">17:47</div>
     </a>
   </div>
-
 </div>
-
 <footer>THE WIRE // internal comms &middot; do not share outside the channel</footer>
-
 <script>
   document.querySelectorAll('[data-counter]').forEach(function (el) {
     var name = el.getAttribute('data-counter');
@@ -107,6 +103,5 @@
       .catch(function () { el.textContent = '?'; });
   });
 </script>
-
 </body>
 </html>
